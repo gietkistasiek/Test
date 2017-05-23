@@ -7,7 +7,7 @@ Napisz funkcję, która:	- zbierze możliwe informacje o użytkowniku z $_SERVER
 identyfikator (maks 32 znaki) i go zwróci
 */
 function userUniqId(){
-	return md5(serialize($_SERVER));
+	return md5($_SERVER);
 }
 $userId=userUniqId();
 //
@@ -27,7 +27,7 @@ function sameThreeLettersCount($txt){
 	}
 	return $count;
 }
-$sameThreeLettersCount = sameThreeLettersCount('sificccosaaae');
+//$sameThreeLettersCount = sameThreeLettersCount('sificccosaaae');
 
 /*
 3. zadanie
@@ -58,7 +58,7 @@ function colorString($text){
 	return $colorString;
 }
 
-$colorString = colorString('napis, który zostanie pokazany w skali odcieni szarości').'a';
+//$colorString = colorString('napis, który zostanie pokazany w skali odcieni szarości').'a';
 
 /*
 4. zadanie 
@@ -140,7 +140,7 @@ if(file_exists("article.txt")) {
 	$txt = "Nie udało się odszukać pliku article.txt";
 }
 
-/* Testowe dane */
+/* Testowe dane 
 
 echo "<h1>Test</h1><hr/>";
 echo '<h3>Zadanie 1:</h3> $userId = '.$userId;
@@ -158,5 +158,5 @@ echo "Szybkość czytania:<BR>". $a->averageSpeedReading()."<br><hr>";
 echo "Zmianiona kolejność zdań:<BR>". $a->randSentence()."<br><hr>";
 echo "Kolorowanie:<BR>".$a->colorArticle()."<br><hr>";
 
-/* Testowe dane */
+ Testowe dane */
 ?>
